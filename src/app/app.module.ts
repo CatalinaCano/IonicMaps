@@ -5,12 +5,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { MisTabsPage } from "../pages/mis-tabs/mis-tabs";
+import { Geolocation } from '@ionic-native/geolocation';
+import { ModalNuevoSitioPage } from "../pages/modal-nuevo-sitio/modal-nuevo-sitio";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    MisTabsPage,
+    ModalNuevoSitioPage
   ],
   imports: [
     BrowserModule,
@@ -19,11 +22,13 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    MisTabsPage,
+    ModalNuevoSitioPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
